@@ -1,0 +1,71 @@
+img {
+  max-width: 100%; 
+  height: 300px;  
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.flex{
+display: flexbox;
+}
+.card{
+  position: relative;
+  height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .cap p{
+   position: absolute;
+  bottom: 0;       
+  left: 0;       
+  right: 0;       
+  padding: 15px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6); 
+  }
+  @starting-style {
+  .card {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+}
+
+  }
+ .card:hover{
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 20px rgba(224, 5, 5, 0.718); }
+
+  .card p{
+ margin:0px;
+ font-weight:bold;
+ color: rgb(17, 128, 226);
+line-height: 1;
+transition: 
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.25s ease,
+    display 0.35s ease allow-discrete;
+}
+.filter-btn.active {
+  background-color: #0284c7;
+  border-color: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+}
